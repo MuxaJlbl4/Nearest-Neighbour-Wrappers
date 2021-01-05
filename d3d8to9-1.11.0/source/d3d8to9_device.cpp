@@ -1018,7 +1018,7 @@ HRESULT STDMETHODCALLTYPE Direct3DDevice8::SetTextureStageState(DWORD Stage, D3D
 		case D3DTSS_BORDERCOLOR:
 			return ProxyInterface->SetSamplerState(Stage, D3DSAMP_BORDERCOLOR, Value);
 		case D3DTSS_MAGFILTER:
-			return ProxyInterface->SetSamplerState(Stage, D3DSAMP_MAGFILTER, Value);
+			return ProxyInterface->SetSamplerState(Stage, D3DSAMP_MAGFILTER, D3DTEXF_POINT);	// Override with point filtering (Nearest-Neighbour)
 		case D3DTSS_MINFILTER:
 			return ProxyInterface->SetSamplerState(Stage, D3DSAMP_MINFILTER, Value);
 		case D3DTSS_MIPFILTER:

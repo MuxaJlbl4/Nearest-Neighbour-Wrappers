@@ -347,6 +347,9 @@ HRESULT Direct3DDevice8Wrapper::SetTexture(DWORD Stage, IDirect3DBaseTexture8 *p
 }
 
 HRESULT Direct3DDevice8Wrapper::SetTextureStageState(DWORD Stage, D3DTEXTURESTAGESTATETYPE Type, DWORD Value) {
+    if (Type == D3DTSS_MAGFILTER) {     // If texture is upscaled
+        Value = D3DTEXF_POINT;          // Force point filtering (Nearest-Neighbour)
+    }
     return Direct3DDevice8->SetTextureStageState(Stage, Type, Value);
 }
 
