@@ -838,6 +838,10 @@ HRESULT m_IDirect3DDeviceX::GetTextureStageState(DWORD dwStage, D3DTEXTURESTAGES
 
 HRESULT m_IDirect3DDeviceX::SetTextureStageState(DWORD dwStage, D3DTEXTURESTAGESTATETYPE dwState, DWORD dwValue)
 {
+	if (dwState == D3DTSS_MAGFILTER) {	// If texture is upscaled
+		dwValue = D3DTFG_POINT;			// Force point filtering (Nearest-Neighbour)
+	}
+
 	switch (ProxyDirectXVersion)
 	{
 	case 3:
