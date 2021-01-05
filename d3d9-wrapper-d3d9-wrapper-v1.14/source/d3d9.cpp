@@ -914,6 +914,7 @@ HRESULT f_IDirect3DDevice9::SetSamplerState(THIS_ DWORD Sampler, D3DSAMPLERSTATE
     if (Type == D3DSAMP_MAGFILTER) {    // If texture is upscaled
         Value = D3DTEXF_POINT;          // Force point filtering (Nearest-Neighbour)
     }
+
     return f_pD3DDevice->SetSamplerState(Sampler, Type, Value);
 }
 
