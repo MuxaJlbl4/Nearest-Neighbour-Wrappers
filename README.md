@@ -1,4 +1,4 @@
-# Nearest-Neighbour-Wrappers
+# Nearest-Neighbour Wrappers
  
 A collection of [graphic API wrappers](https://emulation.gametechwiki.com/index.php/Wrappers) with overrided texture filtering methods. Now every upscaled texture renders with point filter (Nearest-Neighbour filter).
 
@@ -11,4 +11,4 @@ A collection of [graphic API wrappers](https://emulation.gametechwiki.com/index.
 - [crosire/d3d8to9](https://github.com/crosire/d3d8to9) d3d8to9.dll
 
 ### Usage:
-Put appropriate dll file to executable path. In case of using d3d8to9.dll, rename to d3d8.dll.
+Put appropriate dll file to executable path. In case of using d3d8to9.dll, rename to d3d8.dll. Also it's highly unrecommend to use wrappers with online anti-cheat protected games!
