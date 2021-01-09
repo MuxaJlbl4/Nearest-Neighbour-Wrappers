@@ -157,6 +157,9 @@ void WINAPI glTexParameteri( GLenum target, GLenum pname, GLint param )
 	if ( ( pname == GL_TEXTURE_MAX_ANISOTROPY_EXT ) && ( param > 1 ) )
 		QFXRenderer::Instance().SetupAnisotropy();
 
+	if (pname == GL_TEXTURE_MAG_FILTER)	// If texture is upscaled
+		param = GL_NEAREST;				// Force point filtering (Nearest-Neighbour)
+
 	gl::qglTexParameteri( target, pname, param );
 }
 
