@@ -31,3 +31,7 @@ Thumbs.db
 # don't add bin and pics
 bin/
 pics/
+
+# VS
+#code/.vs
+#msvc/.vs
