@@ -662,6 +662,9 @@ void QFXRenderer :: RenderGL()
 			}
 		}
 	}
+
+	m_iEnableRender = 0;	// Disable enhances
+
 	if ( m_iEnableRender ) {
 		if ( m_varDebug )
 			QFXLog::Instance().Printf( "%5i: Postprocess at %i\n", m_uiFrameCounter, m_iRenderFrame );
